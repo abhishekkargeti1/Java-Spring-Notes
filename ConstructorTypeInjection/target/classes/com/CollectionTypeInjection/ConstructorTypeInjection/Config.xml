@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd"> 
+    
+    <!-- This is our beans -->
+   <!--  <bean class="com.CollectionTypeInjection.ConstructorTypeInjection.Certificate" name="certificate">
+    		<constructor-arg value="Java Developer Certificate"/>
+    </bean> -->
+  <!--  <bean class="com.CollectionTypeInjection.ConstructorTypeInjection.Person" name="person">
+   			<constructor-arg value="Abhishek"/>
+   			<constructor-arg value="21" type="int"/>
+   			<constructor-arg ref="certificate"/>
+   			   	
+   </bean> -->
+
+	<bean class="com.CollectionTypeInjection.ConstructorTypeInjection.Certificate" name="certificate" c:name="Java Developer Certificate"/>	
+	<bean class="com.CollectionTypeInjection.ConstructorTypeInjection.Person" name="person" c:name="Abhishek" c:id="21" c:c1-ref="certificate" c:list="Apple,Manago,Banana,Animal,Apple"/>
+	<!-- <bean class="com.CollectionTypeInjection.ConstructorTypeInjection.adding" name="add" c:a="10" c:b="5"/>	 -->
+	<bean class="com.CollectionTypeInjection.ConstructorTypeInjection.adding" name="add">
+		<constructor-arg value="10" index="1" type="int"/>
+		<constructor-arg value="20" index="0" type="int"/>
+	</bean>
+</beans>

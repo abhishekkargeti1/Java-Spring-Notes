@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean class="com.CollectionTypeInjection.Student" name="e">
+		<property name="employeeName" value="Abhishek" />
+
+		<property name="Phones">
+			<list>
+				<value>9643668742</value>
+				<value>9891447320</value>
+				<value>9911483468</value>
+			</list>
+		</property>
+		
+		<property name="Address">
+			<set>
+				<value>Delhi</value>
+				<value>Mumbai</value>
+				<value>Lucknow</value>
+			</set>
+		</property>
+		
+		
+		<property name="Courses">
+			<map>
+				<entry key="Java" value="2 Month"/>
+				<entry key="Python" value="1 Month"/>
+				<entry key="PHP" value="3 Month"/>
+			</map>
+		</property>
+		
+		
+		<property name="prop">
+			<props>
+				<prop key="Name">Abhishek</prop>
+				<prop key="Age">18</prop>
+				<prop key="Address">Delhi</prop>
+			
+			</props>
+		</property>
+
+	</bean>
+
+</beans>

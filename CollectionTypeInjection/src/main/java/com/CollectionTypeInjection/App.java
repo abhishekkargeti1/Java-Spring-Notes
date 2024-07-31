@@ -1,0 +1,24 @@
+package com.CollectionTypeInjection;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+        
+        ApplicationContext context =new ClassPathXmlApplicationContext("Config.xml");
+        Student s1 = (Student)context.getBean("e");
+        	System.out.println(s1.getEmployeeName());
+        	System.out.println(s1.getAddress());
+        	System.out.println(s1.getCourses());
+        	System.out.println(s1.getPhones());	
+        	System.out.println(s1.getProp());	
+    }
+}
