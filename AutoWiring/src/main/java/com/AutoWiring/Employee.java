@@ -1,8 +1,8 @@
 package com.AutoWiring;
 
+
 public class Employee {
 	private Address address;
-	
 	public Employee() {
 		super();
 		// TODO Auto-generated constructor stub
