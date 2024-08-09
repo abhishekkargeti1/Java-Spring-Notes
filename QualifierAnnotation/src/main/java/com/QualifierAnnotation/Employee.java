@@ -5,8 +5,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Employee {
 	@Autowired
-	@Qualifier("address")
 	private Address address;
+	
 	
 	public Employee(Address address) {
 		super();

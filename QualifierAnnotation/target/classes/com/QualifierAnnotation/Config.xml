@@ -9,8 +9,10 @@
     
     <!-- This is our beans -->
     <context:annotation-config/>
-	<bean class="com.QualifierAnnotation.Address" name="address" p:city="Delhi" p:street="Ram Street"/>
-	<bean class="com.QualifierAnnotation.Address" name="address1" p:city="Mumbai" p:street="Station Road "/>
+	<bean class="com.QualifierAnnotation.Address" name="a1" p:city="Delhi" p:street="Ram Street"/>
+	
 	<bean class="com.QualifierAnnotation.Employee" name="employee" />
+	
+	
 	 
 </beans>
