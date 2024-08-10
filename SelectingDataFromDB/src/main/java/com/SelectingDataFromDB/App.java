@@ -1,5 +1,7 @@
 package com.SelectingDataFromDB;
 
+import java.util.List;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -16,7 +18,9 @@ public class App
     {
        ApplicationContext context = new ClassPathXmlApplicationContext("com/SelectingDataFromDB/Config.xml");
        studentImplement s1=(studentImplement)context.getBean("student");
-       Student s = s1.select(1808);
-       System.out.println(s);
+       List<Student> data = s1.getallstudent();
+       for(Student s :data) {
+    	   System.out.println(s);
+       }
     }
 }
