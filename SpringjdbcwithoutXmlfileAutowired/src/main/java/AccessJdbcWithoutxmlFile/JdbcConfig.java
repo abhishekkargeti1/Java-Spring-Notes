@@ -1,13 +1,14 @@
 package AccessJdbcWithoutxmlFile;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
-import com.UserDao.UserdaoImp;
 
 @Configuration
+@ComponentScan(basePackages = {"com.UserDao"})
 public class JdbcConfig {
 	
 	@Bean("ds")
@@ -27,11 +28,11 @@ public class JdbcConfig {
 		return jdbctemplate;
 	}
 	
-	@Bean("userdao")
-	public UserdaoImp userdao() {
+	/* @Bean("userdao") */
+	/*public UserdaoImp userdao() {
 		UserdaoImp  userdao = new UserdaoImp();
 		userdao.setTemp(getTemplate());
 		return userdao;
-	}
+	}*/
 	
 }

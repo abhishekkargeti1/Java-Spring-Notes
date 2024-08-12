@@ -2,13 +2,16 @@ package com.UserDao;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
 
 import com.Entites.Student;
-
+@Component("userdao")
 public class UserdaoImp implements UserDao {
-
+	
+	@Autowired
 	JdbcTemplate temp;
 	
 	public JdbcTemplate getTemp() {
