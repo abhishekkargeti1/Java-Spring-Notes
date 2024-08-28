@@ -77,6 +77,14 @@ public class Student {
 	public void setGender(String gender) {
 		Gender = gender;
 	}
+
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", Name=" + Name + ", Address=" + Address + ", PhoneNumber=" + PhoneNumber
+				+ ", Gender=" + Gender + "]";
+	}
+	
+	
 	
 	
 	

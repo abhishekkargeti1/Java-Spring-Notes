@@ -15,15 +15,20 @@ public class App
 {
     public static void main( String[] args )
     {
-    	Scanner sc = new Scanner(System.in);
-    	System.out.println("Enter the id which should be delete ");
-    	int userInput= sc.nextInt();
+		/*
+		 * Scanner sc = new Scanner(System.in);
+		 * System.out.println("Enter the id which should be delete "); int userInput=
+		 * sc.nextInt();
+		 */
        ApplicationContext context = new ClassPathXmlApplicationContext("com/SpringJdbcAnotherway/Config.xml");
        StudentdaoImplem s1=(StudentdaoImplem)context.getBean("studentdao");
-       Student student = new Student();
-       student.setId(userInput);
-       int result =s1.delete(student);
-       System.out.println("Row Affected are "+result);
+		/*
+		 * Student student = new Student(); student.setId(userInput); int result
+		 * =s1.delete(student); System.out.println("Row Affected are "+result);
+		 */
+       
+       Student student1 = s1.getdata(1808);
+       System.out.println(student1);
        
        
     }
