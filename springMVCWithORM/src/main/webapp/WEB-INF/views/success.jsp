@@ -8,5 +8,8 @@
 </head>
 <body>
 	<h1>Your Details Are Successfully Registered</h1>
+	<form action="getAllData" >
+		<button type="submit">Click here to see Registered User Details</button>
+	</form>
 </body>
 </html>

@@ -1,5 +1,7 @@
 package com.Service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +23,14 @@ public class UserServiceImp implements userService {
 		System.out.println("Service layer details "+details);
 		userdaoimp.saveData(details);
 	
+	}
+
+	@Override
+	@Transactional
+	public List<userDetails> details() {
+		// TODO Auto-generated method stub
+		 return userdaoimp.details();
+		
 	}
 
 }
