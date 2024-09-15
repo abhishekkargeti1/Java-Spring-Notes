@@ -1,3 +1,4 @@
+<%@page import="org.springframework.validation.BindingResult"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -17,7 +18,7 @@
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	crossorigin="anonymous">
 	
-<link rel="stylesheet" href="<c:url value="/resources/css/style.css"/>">
+<%-- <link rel="stylesheet" href="<c:url value="/resources/css/style.css"/>"> --%>
 <script src="<c:url value="/resources/js/script.js"/>"></script>
 <title>Home</title>
 </head>
@@ -27,9 +28,7 @@
 	<div class="container mt-5">
 		<h3 class="text-center">Registration Form</h3>
 		<%-- <div class="alert alert-danger" role="alert">${result}</div> --%>
-		
 		<div class="alert alert-danger" role="alert"><form:errors path="alert.*"/></div>
-		
 		<form action="processform" method="Post">
 			<div class="form-group">
 				<label for="Name">Name</label> <input type="text"
