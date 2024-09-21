@@ -29,7 +29,6 @@ public class DataProcessController {
 		String path = session.getServletContext().getRealPath("/") + "WEB-INF" + File.separator + "resources"
 				+ File.separator + "images"+File.separator+file.getOriginalFilename();
 		System.out.println(path);
-
 		try {
 			FileOutputStream fos = new FileOutputStream(path);
 			fos.write(data);
