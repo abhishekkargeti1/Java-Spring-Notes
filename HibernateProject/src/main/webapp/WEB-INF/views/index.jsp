@@ -47,7 +47,7 @@
 	                            </thead>
 	                            <tbody>
 	                                <tr>
-	                                    <td><input type="text" class="form-control" name="eddetails	[0].percentage"  required></td>
+	                                    <td><input type="text" class="form-control" name="eddetails[0].percentage"  required></td>
 	                                    <td><input type="text" class="form-control" name="eddetails[0].board" required></td>
 	                                    <td><input type="text" class="form-control" name="eddetails[0].year" required></td>
 	                                    <td><button type="button" class="btn btn-danger" onclick="removeRow(this)">Remove</button></td>
